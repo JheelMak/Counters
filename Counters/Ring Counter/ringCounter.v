@@ -3,7 +3,7 @@ module ringCounter(
 input clk,rst,
 output reg[7:0] out
 );
-always@(posedge clk)
+	always@(posedge clk, rst)
 begin
 	if(rst)
 		out<=8'b10000000;
